@@ -4,11 +4,12 @@ import { Subscription } from 'rxjs';
 import { Author } from 'src/app/books/model/book';
 import { AuthorService } from '../service/author.service';
 import { NgIf } from '@angular/common';
+import { BooknamesPipe } from 'src/app/pipes/booknames.pipe';
 
 @Component({
   selector: 'app-author',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, BooknamesPipe],
   templateUrl: './author.component.html',
   styleUrl: './author.component.css'
 })

@@ -11,5 +11,9 @@
       <div class="col-3">Last Name:</div>
       <div class="col-9">{{ selectedAuthor?.lastName }}</div>
     </div>
+    <div class="row" [hidden]="!selectedAuthor.books">
+      <div class="col-3">Books:</div>
+      <div class="col-9"><span [innerHTML]="selectedAuthor.books| booknames"></span></div>
+    </div>
   </div>
   
